@@ -10,7 +10,7 @@ export const getBasketTotal = (basket) =>
 const reducer = (state, action) => {
 console.log('action: ', action);
     switch (action.type) {
-        case "ADD_TO_BASKET":
+        case 'ADD_TO_BASKET':
         return {
             ...state,
             basket: [...state.basket, action.item],
@@ -22,7 +22,7 @@ console.log('action: ', action);
             basket: []
         }
 
-        case "REMOVE_FROM_BASKET":
+        case 'REMOVE_FROM_BASKET':
         const index = state.basket.findIndex(
             (basketItem) => basketItem.id === action.id
         );
@@ -36,13 +36,12 @@ console.log('action: ', action);
             `Cant remove product (id: ${action.id}) as its not in basket!`
             )
         }
-
         return {
             ...state,
             basket: newBasket
         }
         
-        case "SET_USER":
+        case 'SET_USER':
         return {
             ...state,
             user: action.user
