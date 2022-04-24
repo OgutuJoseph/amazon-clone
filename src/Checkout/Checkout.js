@@ -14,7 +14,7 @@ function Checkout() {
                 <img className='checkout__ad' alt='' src='https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg' />
     
                 <div>
-                    <h3>Logged in as (email): {user?.email}</h3>
+                    <h3>Logged in as: {user?.email}</h3>
                     <h2 className='checkout__title'>Your Shopping Basket</h2>
                     
                     {basket.map(item => (
